@@ -1,0 +1,47 @@
+<%- include("partials/header") %>
+
+<header>
+    <nav><a href="#">Weather Now</a></nav>
+</header>
+
+
+<div class="form">
+    <form action="/" method="POST">
+        <input type="text" placeholder="Enter City Name" name="city">
+        </form>
+</div>
+
+<section class="main">
+    <div class="display">
+         <% if(weather.weather[0].main === 'Clear' || weather.weather[0].main==="Sunny"){ %>
+            <img src="/images/—Pngtree—vector cartoon sun_2645160.png" alt="">
+            <%  } else if(weather.weather[0].main === "Rain" || weather.weather[0].main==="Thunderstorm"){ %>
+                <img src="/images/—Pngtree—beautiful cool cartoon hand-painted rain_3593453.png" alt="">
+                <% }  else { %>
+            <img src="/images/—Pngtree—sunny vector icon_3728959.png" alt="">
+            <% } %>
+        <h2><%= weather.weather[0].main %></h2>
+    </div>
+    <div class="info">
+     <div class="details">
+        <h1><%=weather.name%></h1>
+       <div class="list">
+        <ul>
+            <li>Temperature :- <span><%= Math.floor(weather.main.temp - 273) %> °C</span></li>
+            <li>Wind Speed :- <span><%= weather.wind.speed%> km/hr</span></li>
+            <li>Pressure :- <span><%= weather.main.pressure %> Pa</span></li>
+            <li>Humidity :- <span><%= weather.main.humidity %></span></li>
+            <li>Visibilty :- <span><%=weather.visibility%></span></li>
+            <li>Description :- <span><%= weather.weather[0].description %></span></li>
+        </ul>
+       </div>
+     </div>
+    </div>
+</section>
+
+<footer>
+    <hr>
+    <p><i>Created By Samar</i></p>
+</footer>
+
+<%- include("partials/footer") %>

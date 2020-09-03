@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Merriweather', serif;
+    font-size: 5rem;
+    color: white;
+    background-color: #638FCD;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+@import 'header';
+@import 'form';
+@import 'main';
+@import 'footer';
+

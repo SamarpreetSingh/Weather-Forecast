@@ -1,0 +1,14 @@
+header{
+    width: 100vw;
+    background-color: rgb(29, 28, 31);
+    height: 5vh;
+    nav{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+footer{
+    // background-color: black;
+    margin-top: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    hr{
+        width: 20%;
+        border-radius: 20px;
+        height: 2px;
+    }
+}
