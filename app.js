@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 const fetch = require('node-fetch');
+const port = 3000 | process.env.PORT;
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
@@ -59,7 +60,7 @@ app.post('/', (req, res) => {
                 }})
 })
 
-    app.listen(3000, () => console.log("Server is running"));
+    app.listen(port, () => console.log("Server is running"));
 
 
         
