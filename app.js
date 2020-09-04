@@ -11,6 +11,8 @@ app.use(express.urlencoded({extended: true}));
 
 
 app.get('/', (req, res) => {
+    var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    console.log(ip);
    fetch('http://api.ipstack.com/check?access_key='+process.env.location_apikey)
    .then(responce => responce.json())
    .then(data => {
