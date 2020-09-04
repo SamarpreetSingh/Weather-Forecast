@@ -60,18 +60,19 @@
 {
   .main{
       height: 80vh;
+      overflow: scroll;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       .display{
-          flex: 1;
+          flex: 0;
           flex-direction: column-reverse;
           width: 80%;
           margin: auto;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           img{
-             width: 250px;
+             width: 220px;
           }
           h2{
               margin-top: 10px;
@@ -79,10 +80,10 @@
           }
       }
       .info{
-        width: auto;
-        flex: 2;
-        margin: auto;
-        padding: 2rem auto;
+       width: 90%;
+       flex: 0;
+       margin: auto;
+       padding: 2rem auto;
        display: flex;
        align-items: center;
         .details{
@@ -90,6 +91,7 @@
             height: 90%;
             .list ul li{
             width: 110%;
+            line-height: 32px;
             }
             h1{
                 font-size: 4rem;

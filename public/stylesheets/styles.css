@@ -11,9 +11,8 @@ body {
   font-size: 5rem;
   color: white;
   background-color: #638FCD;
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100vw;
-  height: 100vh;
 }
 
 ul {
@@ -179,6 +178,7 @@ header nav a {
 @media screen and (max-width: 950px) {
   .main {
     height: 80vh;
+    overflow: scroll;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -191,9 +191,9 @@ header nav a {
             justify-content: flex-start;
   }
   .main .display {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -203,22 +203,22 @@ header nav a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .main .display img {
-    width: 250px;
+    width: 220px;
   }
   .main .display h2 {
     margin-top: 10px;
     font-size: 3rem;
   }
   .main .info {
-    width: auto;
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
+    width: 90%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
     margin: auto;
     padding: 2rem auto;
     display: -webkit-box;
@@ -234,6 +234,7 @@ header nav a {
   }
   .main .info .details .list ul li {
     width: 110%;
+    line-height: 32px;
   }
   .main .info .details h1 {
     font-size: 4rem;
@@ -241,9 +242,10 @@ header nav a {
 }
 
 footer {
-  margin-top: 10px;
   width: 100%;
   position: absolute;
+  display: block;
+  height: 3vh;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,16 +254,16 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 footer hr {
-  width: 20%;
+  width: 30%;
   border-radius: 20px;
   height: 2px;
 }
