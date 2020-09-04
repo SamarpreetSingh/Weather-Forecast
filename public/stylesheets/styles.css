@@ -267,4 +267,10 @@ footer hr {
   border-radius: 20px;
   height: 2px;
 }
+
+@media screen and (max-height: 600px) {
+  footer {
+    display: none;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

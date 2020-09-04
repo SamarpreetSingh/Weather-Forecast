@@ -15,3 +15,10 @@ footer{
         height: 2px;
     }
 }
+
+@media screen and (max-height: 580px)
+{
+    footer{
+        display: none;
+    }
+}
