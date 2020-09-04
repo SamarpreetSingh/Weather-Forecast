@@ -268,7 +268,7 @@ footer hr {
   height: 2px;
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-width: 500px) {
   footer {
     display: none;
   }
